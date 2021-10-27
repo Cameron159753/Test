@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<script src="java.js"></script>
+   
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+ <div class="sidebar">
+        <div class="logo-details">
+          <i class='bx bxl-c-plus-plus icon'></i>
+            <div class="logo_name">CodingLab</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <a href="index.html">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Home</span>
+            </a>
+             <span class="tooltip">Home</span>
+          </li>
+          <li>
+           <a href="about.html">
+             <i class='bx bx-user' ></i>
+             <span class="links_name">About</span>
+           </a>
+           <span class="tooltip">About</span>
+         </li>
+         <li>
+           <a href="education.html">
+             <i class='bx bx-chat' ></i>
+             <span class="links_name">Education</span>
+           </a>
+         </li>
+         <li>
+           <a href="testimonial.html">
+             <i class='bx bx-pie-chart-alt-2' ></i>
+             <span class="links_name">Testimonial</span>
+           </a>
+           <span class="tooltip">Testimonial</span>
+         </li>
+         <li>
+           <a href="projects.html">
+             <i class='bx bx-folder' ></i>
+             <span class="links_name">Projects</span>
+           </a>
+           <span class="tooltip">Projects</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-cart-alt' ></i>
+             <span class="links_name">Order</span>
+           </a>
+           <span class="tooltip">Order</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-heart' ></i>
+             <span class="links_name">Saved</span>
+           </a>
+           <span class="tooltip">Saved</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-cog' ></i>
+             <span class="links_name">Setting</span>
+           </a>
+           <span class="tooltip">Setting</span>
+         </li>
+         <li class="profile">
+             <div class="profile-details">
+               <img src="profile.jpg" alt="profileImg">
+               <div class="name_job">
+                 <div class="name">Prem Shahi</div>
+                 <div class="job">Web designer</div>
+               </div>
+             </div>
+             <i class='bx bx-log-out' id="log_out" ></i>
+         </li>
+        </ul>
+      </div>
+      
+      <script>
+        let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+      </script>
+      
+      <body>
+        <div class="about">
+          <h1>Education</h1>
+          
+             <div class="shadow"> Education</div>
+          
+          </div>
+         
+        <ul class="timeline">
+          <!-- Item 1 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="flag">Grade 11.</span>
+                <span class="time-wrapper"><span class="time">2018</span></span>
+              </div>
+              <div class="desc">Lorem ipsum Nisi labore aute do aute culpa magna nulla voluptate exercitation deserunt proident.</div>
+            </div>
+          </li>
+        
+          <!-- Item 2 -->
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="flag">Grade 12.</span>
+                <span class="time-wrapper"><span class="time">2019</span></span>
+              </div>
+              <div class="desc">Lorem ipsum In ut sit in dolor nisi ex magna eu anim anim tempor dolore aliquip enim cupidatat laborum dolore.</div>
+            </div>
+          </li>
+        
+          <!-- Item 3 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="flag">Codespace.</span>
+                <span class="time-wrapper"><span class="time">2020</span></span>
+              </div>
+              <div class="desc">Lorem ipsum In ut sit in dolor nisi ex magna eu anim anim tempor dolore aliquip enim cupidatat laborum dolore.</div>
+            </div>
+          </li>
+          <!-- Item 4 -->
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="flag">Life Choices.</span>
+                <span class="time-wrapper"><span class="time">2021</span></span>
+              </div>
+              <div class="desc">Lorem ipsum Minim labore Ut cupidatat quis qui deserunt proident fugiat pariatur cillum cupidatat reprehenderit sit id dolor consectetur ut.</div>
+            </div>
+          </li>
+        </ul>
+        <!-- end -->
+        <div class="about">
+          <h1>Skills</h1>
+          
+             <div class="shadow">Skills</div>
+          </div>
+        
+          <div class="row">
+          <div class="column">
+            <img src="images/logo-2582748_640.webp" width="150px" height="150px">
+            </div>
+            <div class="column">
+            <img src="images/css.png" width="150px" height="150px">
+            </div>
+            <div class="column">
+            <img src="images/js.png" width="150px" height="150px">
+            </div>
+            <div class="column">
+            <img src="images/python.png" width="150px" height="150px">
+            </div>
+            <div class="column">
+            <img src="images/Bootstrap.png" width="150px" height="150px">
+            </div>
+            <div class="column">
+            <img src="images/PHP.png" width="150px" height="150px">
+            </div>
+           </div>
+        <!-- squares -->
+      
+        <!-- <ul class="bubbles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+      </ul> -->
+       <!-- end -->
+      
+       
+      </body>
+</html>
